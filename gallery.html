@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gallery - INFONIX SOLUTIONS</title>
+  <meta name="description"
+    content="Explore the gallery of Infonix Solutions, showcasing our IT training sessions, technical workshops, and posters in Thodupuzha, Kerala.">
+  <meta name="keywords"
+    content="Infonix Solutions Gallery, IT training photos, Thodupuzha IT institute, Computer lab photos">
+
+  <!-- Favicons -->
+  <link href="assets/img/Infonix_logo_S.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .gallery-box {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      background: #fff;
+      will-change: transform;
+    }
+
+    .gallery-box:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-box img,
+    .gallery-box video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-box {
+      position: relative;
+      cursor: pointer;
+      background: #111;
+      /* Dark background for video container */
+      min-height: 250px;
+      /* Match gallery-box image height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-box::after {
+      content: '\F4F4';
+      font-family: 'bootstrap-icons';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: #fff;
+      opacity: 0.8;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Preloader Styles */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #preloader:before {
+      content: "";
+      position: fixed;
+      top: calc(50% - 30px);
+      left: calc(50% - 30px);
+      border: 6px solid #019abc;
+      border-top-color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: animate-preloader 1s linear infinite;
+    }
+
+    @keyframes animate-preloader {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Section reveal effect */
+    .section-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: opacity, transform;
+    }
+
+    .section-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="starter-page">
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <script>
+    // Custom Scroll Observer for 'Section Reveal' with deliberate lag
+    document.addEventListener('DOMContentLoaded', function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add slight 'Lag' before showing section as requested
+            setTimeout(() => {
+              entry.target.classList.add('active');
+            }, 400);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-reveal').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/infonix logo-white.webp" alt="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="#gallery">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.webp);">
+      <div class="container position-relative">
+        <h1>Gallery</h1>
+        <p>Glimpses of our journey, training sessions, and celebrations.</p>
+        <nav class="breadcrumbs">
+          <!-- <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Gallery</li>
+          </ol> -->
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Core Gallery Section -->
+    <section id="gallery" class="section bg-light-blue tech-pattern-light section-reveal">
+      <div class="container section-title">
+        <h2>Our Workshops & Activities</h2>
+        <p>Glimpses of our vibrant learning environment</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-1.webp" class="glightbox">
+                <img src="assets/img/team/team-1.webp" alt="Team 1">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-2.webp" class="glightbox">
+                <img src="assets/img/team/team-2.webp" alt="Team 2">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-3.webp" class="glightbox">
+                <img src="assets/img/team/team-3.webp" alt="Team 3">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-4.webp" class="glightbox">
+                <img src="assets/img/team/team-4.webp" alt="Team 4">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-5.webp" class="glightbox">
+                <img src="assets/img/team/team-5.webp" alt="Team 5">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-6.webp" class="glightbox">
+                <img src="assets/img/team/team-6.webp" alt="Team 6">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-7.webp" class="glightbox">
+                <img src="assets/img/team/team-7.webp" alt="Team 7">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-8.webp" class="glightbox">
+                <img src="assets/img/team/team-8.webp" alt="Team 8">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-9.webp" class="glightbox">
+                <img src="assets/img/team/team-9.webp" alt="Team 9">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-10.JPG" class="glightbox">
+                <img src="assets/img/team/team-10.JPG" alt="Team 10">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-11.jpeg" class="glightbox">
+                <img src="assets/img/team/team-11.jpeg" alt="Team 11">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box">
+              <a href="assets/img/team/team-12.JPG" class="glightbox">
+                <img src="assets/img/team/team-12.JPG" alt="Team 12">
+              </a>
+            </div>
+          </div>
+          <!-- Videos -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box video-box" onclick="openFullscreen(this)">
+              <video preload="metadata">
+                <source src="assets/img/team/video-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box video-box" onclick="openFullscreen(this)">
+              <video preload="none"
+                poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                <source src="assets/img/team/video-2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box video-box" onclick="openFullscreen(this)">
+              <video preload="metadata">
+                <source src="assets/img/team/video-3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-box video-box" onclick="openFullscreen(this)">
+              <video preload="metadata">
+                <source src="assets/img/team/video-4.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- About Column -->
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/infonix logo-white.webp" alt="Infonix Logo" style="max-height: 40px;">
+          </a>
+          <p class="description">
+            Your trusted partner for professional IT training, software development,
+            and complete technical services. We are dedicated to empowering businesses and individuals
+            with innovative digital solutions.
+          </p>
+          <div class="social-links d-flex mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Useful Links -->
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i><a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="index.html#about">About Us</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="service-details.html">IT Skill Training</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="index.html#contact">Contact</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="gallery.html">Gallery</a></li>
+            <li><i class="bi bi-chevron-right"></i><a href="technicalservice.html">Technical Services</a></li>
+          </ul>
+        </div>
+        <!-- Contact Section -->
+        <div class="col-lg-4 col-md-6 footer-contact">
+          <h4>Contact & Info</h4>
+          <p>First Floor, 39/186 B9, St. Michael's Arcade,</p>
+          <p>Erakkumpuzha - Thenamkunnu Bypass Road, Thodupuzha</p>
+          <p>Idukki, Kerala - 685608</p>
+          <p class="mt-2"><strong>Phone:</strong> <a href="tel:+919048852444"
+              style="color: inherit; text-decoration: none;">+91 90488 52444</a></p>
+          <p><strong>Email:</strong> <a href="mailto:infonixsolutionstdpa@gmail.com"
+              style="color: inherit; text-decoration: none;">infonixsolutionstdpa@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="container copyright text-center mt-3">
+      <p>
+        © Copyright <strong class="px-1 sitename">Infonix Solutions</strong>
+        All Rights Reserved
+      </p>
+      <div class="credits">
+        Computer Learning • Sales & Services
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Contact Buttons -->
+  <div class="contact-actions">
+    <!-- Static Alert Messages moved outside to prevent hover triggers -->
+    <div class="floating-alerts mb-2">
+      <a href="technicalservice.html" class="static-alert-link">
+        <i class="bi bi-info-circle-fill me-2"></i> Computer Sales & Service Available
+      </a>
+      <a href="technicalservice.html" class="static-alert-link">
+        <i class="bi bi-broadcast me-2"></i> CCTV & Power Solutions
+      </a>
+    </div>
+
+    <div class="services-wrapper">
+      <div class="services-dropdown" id="servicesDropdown">
+        <a href="index.html#services" class="service-item-btn">Web Services</a>
+        <a href="service-details.html" class="service-item-btn">Training Services</a>
+        <a href="technicalservice.html" class="service-item-btn">Technology Supply & Services</a>
+      </div>
+      <button class="services-btn" id="servicesFab" title="Our Services">
+        <span>Services Provided</span>
+        <i class="bi bi-chevron-up ms-2"></i>
+      </button>
+    </div>
+
+    <div class="contact-row">
+      <a href="https://wa.me/919048852444" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+      <a href="tel:+919048852444" class="call-btn" title="Call Us">
+        <i class="bi bi-telephone-fill"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+
+    function openFullscreen(box) {
+      const video = box.querySelector('video');
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
