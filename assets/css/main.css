@@ -2599,3 +2599,80 @@ section,
 .static-alert-link:nth-child(2):hover {
   border-color: #00c6ff;
 }
+
+/*--------------------------------------------------------------
+# Bottom Left Floating Logo Badge (Infonix Ignite)
+--------------------------------------------------------------*/
+.ignite-badge-container {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+.ignite-badge-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.ignite-badge-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff6b00, #ff8c00);
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ignite-badge-link:hover .ignite-badge-text {
+  background: linear-gradient(135deg, #019abc, #00b4db);
+  box-shadow: 0 4px 12px rgba(1, 154, 188, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.ignite-badge-link img {
+  height: 160px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ignite-badge-link:hover img {
+  transform: translateY(-6px) scale(1.08);
+  filter: drop-shadow(0 10px 20px rgba(1, 154, 188, 0.5));
+}
+
+/* Adapt for small screens */
+@media (max-width: 576px) {
+  .ignite-badge-container {
+    left: 10px;
+    bottom: 10px;
+  }
+  .ignite-badge-text {
+    font-size: 9px;
+    padding: 3px 8px;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+  }
+  .ignite-badge-link img {
+    height: 85px;
+  }
+}
