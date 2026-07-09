@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>INFONIX IGNITE 2026 - Registration</title>
+  <meta name="description"
+    content="Register for INFONIX IGNITE 2026 - The Internship Distribution & Achievement Celebration of Infonix Solutions. Join technical competitions and celebrate innovation.">
+  <meta name="keywords"
+    content="Infonix Ignite 2026, Event Registration, Coding Competition, Tech Quiz, Design Challenge, PES Tournament, Thodupuzha">
+
+  <!-- Favicons -->
+  <link href="assets/img/Infonix_logo_S.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Registration Styles -->
+  <style>
+    :root {
+      --background-color: #090a17;
+      --primary-glow: rgba(1, 154, 188, 0.4);
+      --secondary-glow: rgba(255, 107, 0, 0.4);
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --text-muted: #a0aec0;
+    }
+
+    body {
+      background: radial-gradient(circle at 10% 20%, #061124 0%, #0a1931 90%);
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Preloader Styles */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      overflow: hidden;
+      background: #061124;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #preloader:before {
+      content: "";
+      position: fixed;
+      top: calc(50% - 30px);
+      left: calc(50% - 30px);
+      border: 6px solid #019abc;
+      border-top-color: #ff6b00;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: animate-preloader 1s linear infinite;
+    }
+
+    @keyframes animate-preloader {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Glassmorphism Form Wrapper */
+    .ignite-form-section {
+      padding: 120px 0 80px 0;
+      position: relative;
+    }
+
+    .ignite-form-section::before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .ignite-form-section::after {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--secondary-glow) 0%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .form-container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .form-container:hover {
+      box-shadow: 0 25px 50px rgba(1, 154, 188, 0.15);
+      border-color: rgba(1, 154, 188, 0.3);
+    }
+
+    .form-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #ff6b00, #019abc);
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .form-header h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #ffffff 30%, #ff8c00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .form-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Form Fields */
+    .form-group-custom {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .form-control-custom {
+      background: rgba(10, 25, 49, 0.6) !important;
+      border: 1px solid var(--glass-border) !important;
+      border-radius: 12px !important;
+      color: #ffffff !important;
+      padding: 16px 20px !important;
+      font-size: 1rem !important;
+      transition: all 0.3s ease !important;
+      width: 100%;
+    }
+
+    .form-control-custom:focus {
+      border-color: #019abc !important;
+      box-shadow: 0 0 10px rgba(1, 154, 188, 0.4) !important;
+      transform: translateY(-2px);
+    }
+
+    .form-label-custom {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: transparent;
+      padding: 0 5px;
+    }
+
+    /* Floating Labels */
+    .form-control-custom:focus ~ .form-label-custom,
+    .form-control-custom:not(:placeholder-shown) ~ .form-label-custom {
+      top: 0;
+      font-size: 0.85rem;
+      color: #019abc;
+      background: #0a1931;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Select inputs styling override */
+    select.form-control-custom {
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23a0aec0' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+      background-repeat: no-repeat !important;
+      background-position: right 20px center !important;
+      background-size: 16px !important;
+    }
+
+    select.form-control-custom option {
+      background-color: #0d1e3d;
+      color: #ffffff;
+    }
+
+    .select-label-fixed {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #019abc;
+      margin-bottom: 8px;
+    }
+
+    /* Custom Radio & Checkboxes */
+    .option-card-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .option-card {
+      background: rgba(10, 25, 49, 0.4);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .option-card input[type="radio"],
+    .option-card input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .option-card:hover {
+      border-color: rgba(255, 107, 0, 0.4);
+      transform: translateY(-2px);
+      background: rgba(10, 25, 49, 0.6);
+    }
+
+    /* Radio Checked */
+    .option-card input:checked + .option-content {
+      color: #ff6b00;
+    }
+
+    .option-card:has(input:checked) {
+      border-color: #ff6b00;
+      box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+      background: rgba(255, 107, 0, 0.05);
+    }
+
+    /* Checkbox Checked */
+    .option-card:has(input[type="checkbox"]:checked) {
+      border-color: #019abc;
+      box-shadow: 0 0 15px rgba(1, 154, 188, 0.3);
+      background: rgba(1, 154, 188, 0.05);
+    }
+
+    .option-card input[type="checkbox"]:checked + .option-content {
+      color: #019abc;
+    }
+
+    .option-content {
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .option-content i {
+      font-size: 1.5rem;
+    }
+
+    /* Submit Button */
+    .btn-submit-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn-ignite-submit {
+      background: linear-gradient(135deg, #ff6b00 0%, #ff8c00 100%);
+      border: none;
+      border-radius: 50px;
+      color: #ffffff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 16px 50px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 10px 20px rgba(255, 107, 0, 0.4);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+    }
+
+    .btn-ignite-submit:hover {
+      background: linear-gradient(135deg, #019abc 0%, #00b4db 100%);
+      box-shadow: 0 10px 25px rgba(1, 154, 188, 0.5);
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .btn-ignite-submit:active {
+      transform: translateY(-1px) scale(1);
+    }
+
+    /* Success Overlay Modal */
+    .success-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 17, 36, 0.95);
+      backdrop-filter: blur(15px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .success-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .success-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 50px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      transform: scale(0.8);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .success-overlay.show .success-card {
+      transform: scale(1);
+    }
+
+    .success-icon-wrapper {
+      width: 100px;
+      height: 100px;
+      background: rgba(1, 154, 188, 0.1);
+      border: 3px solid #019abc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px auto;
+      position: relative;
+      animation: pulse-glow 2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% { box-shadow: 0 0 0 0 rgba(1, 154, 188, 0.4); }
+      70% { box-shadow: 0 0 0 20px rgba(1, 154, 188, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(1, 154, 188, 0); }
+    }
+
+    .success-icon-wrapper i {
+      font-size: 3rem;
+      color: #019abc;
+    }
+
+    .success-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #ffffff 40%, #019abc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .success-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn-success-close {
+      background: linear-gradient(135deg, #019abc 0%, #00b4db 100%);
+      border: none;
+      border-radius: 50px;
+      color: #ffffff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      padding: 12px 40px;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 15px rgba(1, 154, 188, 0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-success-close:hover {
+      box-shadow: 0 8px 20px rgba(1, 154, 188, 0.5);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    /* Section Reveal animation override */
+    .section-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: opacity, transform;
+    }
+
+    .section-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="starter-page">
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/infonix logo-white.webp" alt="Infonix Solutions">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="index.html#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(assets/img/inforennovated.jpeg);">
+      <div class="container position-relative">
+        <h1>INFONIX IGNITE 2026</h1>
+        <p>Registration Portal for the distribution celebration and technical events.</p>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <section class="ignite-form-section section-reveal">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-container">
+              <div class="form-header">
+                <h2>Event Registration</h2>
+                <p>Complete the form below to confirm your attendance and register for the competitive events. Let us celebrate innovation together!</p>
+              </div>
+
+              <!-- Form Targeting Hidden Iframe for CORS-less background post -->
+              <form action="https://docs.google.com/forms/d/e/1FAIpQLSd8E1hhhBvjchnkFsSMe2NRgiOQtZ0KF9_yZgdbbO_S5Qccvg/formResponse" 
+                    method="POST" 
+                    target="hidden_iframe" 
+                    id="igniteForm"
+                    onsubmit="handleFormSubmit()">
+
+                <!-- Question 1: Full Name -->
+                <div class="form-group-custom">
+                  <input type="text" name="entry.527779610" class="form-control-custom" id="fullName" placeholder=" " required>
+                  <label for="fullName" class="form-label-custom">Full Name *</label>
+                </div>
+
+                <!-- Question 2: Email Address -->
+                <div class="form-group-custom">
+                  <input type="email" name="entry.416381705" class="form-control-custom" id="email" placeholder=" " required>
+                  <label for="email" class="form-label-custom">Email Address *</label>
+                </div>
+
+                <!-- Question 3: Mobile Number -->
+                <div class="form-group-custom">
+                  <input type="tel" name="entry.1506318387" class="form-control-custom" id="mobileNumber" placeholder=" " required pattern="[0-9]{10,12}">
+                  <label for="mobileNumber" class="form-label-custom">Mobile Number *</label>
+                </div>
+
+                <!-- Question 4: College / University Name -->
+                <div class="form-group-custom">
+                  <input type="text" name="entry.2064632227" class="form-control-custom" id="collegeName" placeholder=" " required>
+                  <label for="collegeName" class="form-label-custom">College / University Name *</label>
+                </div>
+
+                <!-- Question 5: Select Your Course -->
+                <div class="form-group-custom">
+                  <label class="select-label-fixed">Select Your Course *</label>
+                  <select name="entry.847708171" class="form-control-custom" id="selectCourse" required>
+                    <option value="" disabled selected>Choose your course...</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.Sc Computer Science">B.Sc Computer Science</option>
+                    <option value="B.Sc Information Technology">B.Sc Information Technology</option>
+                    <option value="B.Tech Computer Science">B.Tech Computer Science</option>
+                    <option value="B.Tech Information Technology">B.Tech Information Technology</option>
+                    <option value="M.Sc Computer Science">M.Sc Computer Science</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Polytechnic">Polytechnic</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+
+                <!-- Question 6: Course Completed at INFONIX Solutions -->
+                <div class="form-group-custom">
+                  <label class="select-label-fixed">Course Completed at INFONIX Solutions *</label>
+                  <select name="entry.1789519068" class="form-control-custom" id="completedCourse" required>
+                    <option value="" disabled selected>Select completed course...</option>
+                    <option value="Python Django">Python Django</option>
+                    <option value="Web designing">Web Designing</option>
+                    <option value="Angular + Node.js">Angular + Node.js</option>
+                    <option value="Python Data Analytics">Python Data Analytics</option>
+                  </select>
+                </div>
+
+                <!-- Question 7: Will you attend INFONIX IGNITE 2026? -->
+                <div class="form-group-custom">
+                  <label class="select-label-fixed">Will you attend INFONIX IGNITE 2026? *</label>
+                  <div class="option-card-group">
+                    <label class="option-card">
+                      <input type="radio" name="entry.1581622927" value="Yes, I will attend." required>
+                      <div class="option-content">
+                        <i class="bi bi-calendar2-check"></i>
+                        <span>Yes, I will attend</span>
+                      </div>
+                    </label>
+                    <label class="option-card">
+                      <input type="radio" name="entry.1581622927" value="No, I will not be able to attend." required>
+                      <div class="option-content">
+                        <i class="bi bi-calendar2-x"></i>
+                        <span>No, I will not attend</span>
+                      </div>
+                    </label>
+                    <label class="option-card">
+                      <input type="radio" name="entry.1581622927" value="Maybe" required>
+                      <div class="option-content">
+                        <i class="bi bi-calendar2-minus"></i>
+                        <span>Maybe</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Question 8: Which competition would you like to participate in? -->
+                <div class="form-group-custom">
+                  <label class="select-label-fixed">Which competition would you like to participate in? (Choose multiple)</label>
+                  <div class="option-card-group">
+                    <label class="option-card">
+                      <input type="checkbox" name="entry.1109323647" value="Coding Competition">
+                      <div class="option-content">
+                        <i class="bi bi-code-slash"></i>
+                        <span>Coding Comp</span>
+                      </div>
+                    </label>
+                    <label class="option-card">
+                      <input type="checkbox" name="entry.1109323647" value="Tech Quiz Competition">
+                      <div class="option-content">
+                        <i class="bi bi-lightbulb"></i>
+                        <span>Tech Quiz</span>
+                      </div>
+                    </label>
+                    <label class="option-card">
+                      <input type="checkbox" name="entry.1109323647" value="Design Challenge">
+                      <div class="option-content">
+                        <i class="bi bi-palette"></i>
+                        <span>Design Challenge</span>
+                      </div>
+                    </label>
+                    <label class="option-card">
+                      <input type="checkbox" name="entry.1109323647" value="PES Tournament">
+                      <div class="option-content">
+                        <i class="bi bi-controller"></i>
+                        <span>PES Tourney</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="btn-submit-container">
+                  <button type="submit" class="btn-ignite-submit">Submit Registration</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Hidden iframe for submission -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { showSuccessModal(); }"></iframe>
+
+  <!-- Success Overlay Modal -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <div class="success-icon-wrapper">
+        <i class="bi bi-check-lg"></i>
+      </div>
+      <h3>Registration Successful!</h3>
+      <p>Thank you for registering for INFONIX IGNITE 2026. Your details have been collected successfully in the system. We look forward to seeing you at the event!</p>
+      <a href="index.html" class="btn-success-close">Return Home</a>
+    </div>
+  </div>
+
+  <!-- Footer Actions (FABs) -->
+  <div class="contact-actions">
+    <div class="services-wrapper">
+      <div class="services-dropdown" id="servicesDropdown">
+        <a href="index.html#services" class="service-item-btn">Web Services</a>
+        <a href="service-details.html" class="service-item-btn">Training Services</a>
+        <a href="technicalservice.html" class="service-item-btn">Technology Supply & Services</a>
+      </div>
+      <button class="services-btn" id="servicesFab" title="Our Services">
+        <span>Services Provided</span>
+        <i class="bi bi-chevron-up ms-2"></i>
+      </button>
+    </div>
+
+    <div class="contact-row">
+      <a href="https://wa.me/919048852444" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+      <a href="tel:+919048852444" class="call-btn" title="Call Us">
+        <i class="bi bi-telephone-fill"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom logic for form submission & modal -->
+  <script>
+    let submitted = false;
+
+    function handleFormSubmit() {
+      submitted = true;
+    }
+
+    function showSuccessModal() {
+      const modal = document.getElementById('successOverlay');
+      modal.classList.add('show');
+    }
+
+    // Scroll Observer for Section Reveal
+    document.addEventListener('DOMContentLoaded', function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('active');
+            }, 200);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-reveal').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
